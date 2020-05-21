@@ -1,0 +1,1 @@
+Here, I have created a simple generator for student progress reports. The user only needs to enter the student's name and gender and choose the desired comments. The concatenated pragraph will appear at the bottom of the page. Note: These comments are geared towards science class
