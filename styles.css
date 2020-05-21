@@ -24,6 +24,10 @@ p {
     font-size: 25px;
 }
 
+.comments {
+    margin-right: 600px;
+}
+
 .comments p {
     margin-left: 7%;
     margin-right: 7%;
@@ -43,12 +47,16 @@ p {
     padding-bottom: 20px;
 }
 
+.report {
+    margin-right: 50px;
+    margin-left: 900px;
+    position: fixed;
+}
+
 #report {
     border-style: solid;
     border-color: black;
     padding: 10px;
-    margin-left: 15%;
-    margin-right: 15%;
 }
 
 #name {

@@ -12,9 +12,11 @@ const commentArray = []
 
 //Event Handlers
 const handleCommentClick = function concat(e) {
-    commentArray.push(e.target.innerText);
+    let comment = e.target;
+    commentArray.push(comment.innerText);
     document.getElementById('report').innerText = commentArray.join(" ");
-    e.target.style.color = "blue";
+    comment.style.color = "blue";
+    comment.style.fontWeight = "bold";
 };
 
 
