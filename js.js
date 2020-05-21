@@ -24,8 +24,6 @@ const handleCommentDoubleClick = function unconcat(e) {
     let comment = e.target;
     comment.style.color = "black";
     comment.style.fontWeight = "normal";
-    let fullStringArray = commentArray;
-    let string = comment.innerText;
     commentArray.splice(commentArray.indexOf(comment.innerText), 1);
     document.getElementById('report').innerText = commentArray.join(" ");
     comment.addEventListener('click', handleCommentClick);
