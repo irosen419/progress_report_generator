@@ -13,8 +13,8 @@ const commentArray = []
 //Event Handlers
 const handleCommentClick = function concat(e) {
     commentArray.push(e.target.innerText);
-    let progressReport = commentArray.join(" ");
-    document.getElementById('report').innerText = progressReport;
+    document.getElementById('report').innerText = commentArray.join(" ");
+    e.target.style.color = "blue";
 };
 
 
