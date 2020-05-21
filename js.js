@@ -8,7 +8,7 @@ let firstPronoun3Words = document.getElementsByClassName('pronoun3first');
 let firstName = document.getElementsByClassName('fname');
 const studentsName = document.getElementById('name').value;
 let finalReport = document.getElementById('report').innerText;
-const commentArray = []
+const commentArray = [];
 
 //Event Handlers
 const handleCommentClick = function concat(e) {
@@ -17,12 +17,28 @@ const handleCommentClick = function concat(e) {
     document.getElementById('report').innerText = commentArray.join(" ");
     comment.style.color = "blue";
     comment.style.fontWeight = "bold";
+    comment.removeEventListener('click', handleCommentClick);
 };
+
+const handleCommentDoubleClick = function unconcat(e) {
+    let comment = e.target;
+    comment.style.color = "black";
+    comment.style.fontWeight = "normal";
+    let fullStringArray = commentArray;
+    let string = comment.innerText;
+    commentArray.splice(commentArray.indexOf(comment.innerText), 1);
+    document.getElementById('report').innerText = commentArray.join(" ");
+    comment.addEventListener('click', handleCommentClick);
+}
 
 
 // Event Listeners
 for (let i = 0; i < comments.length; i++) {
     comments[i].addEventListener('click', handleCommentClick);
+}
+
+for (let i = 0; i < comments.length; i++) {
+    comments[i].addEventListener('dblclick', handleCommentDoubleClick);
 }
 
 // Functions
