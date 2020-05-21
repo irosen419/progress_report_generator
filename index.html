@@ -8,17 +8,19 @@
     <h1 class="title">Progress Report Comment Concatenator</h1>
     <p class="instructions">Welcome to the progress report generator! Simply follow the instructions on the left, 
         entering the student's name and gender. Then click on the comments in the desired order.
-        Your complete paragraph will appear in the box at the bottom of the page. Simple copy and paste wherever you wish to store your reports!
+        Your complete paragraph will appear in the box at the bottom of the page. Simply copy and paste to wherever you wish to store your reports!
         Enjoy!</p>
-    <h2>Please enter the student's name then press Enter</h2>
-    <div>
-        <input type="text" id="name" placeholder="Student's name goes here" font-size="20px">
-        <button type="bottun" onClick="clickEnter()">Enter</button>
-    </div>
-    <h2>Is this student male or female? Please choose one.</h2>
-    <div class="gender">
-        <button onClick="chooseGenderMale()" class="male">Male</button>
-        <button onClick="chooseGenderFemale()" class="female">Female</button>
+    <div class="buttons">
+        <h2>Please enter the student's name then press Enter</h2>
+        <div>
+            <input type="text" id="name" placeholder="Student's name goes here" font-size="20px">
+            <button type="bottun" onClick="clickEnter()">Enter</button>
+        </div>
+        <h2>Is this student male or female? Please choose one.</h2>
+        <div class="gender">
+            <button onClick="chooseGenderMale()" class="male">Male</button>
+            <button onClick="chooseGenderFemale()" class="female">Female</button>
+        </div>
     </div>
     <div class = "comments">
         <div class="Introductory">
@@ -32,7 +34,7 @@
             <p><span class="fname"></span> had a productive year of growth and learning in science, using learning strategies effectively and remaining diligent and responsible about meeting expectations.</p>
         </div>
         <div class="Academic">
-            <h2>1 Positive/Academic Skill</h2>
+            <h2>1 Positive / Academic Skill</h2>
             <p><span class="fname"></span> has developed good organizational skills in science as a result of <span class="pronoun1"></span> meticulous attention to detail.</p>
             <p><span class="fname"></span> sets a high standard for <span class="self"></span> and reaches <span class="pronoun1"></span> goals through hard work and self-initiative.</p>
             <p><span class="pronoun1first"></span>daily contributions and frequent participation in class provide valuable insight into <span class="pronoun1"></span> understanding of science concepts.</p>

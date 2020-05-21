@@ -12,7 +12,6 @@ const commentArray = []
 
 //Event Handlers
 const handleCommentClick = function concat(e) {
-    console.log(e)
     commentArray.push(e.target.innerText);
     let progressReport = commentArray.join(" ");
     document.getElementById('report').innerText = progressReport;

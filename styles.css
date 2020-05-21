@@ -6,6 +6,18 @@ h1, .comments div > h2, .report {
     text-align: center;
 }
 
+p {
+    font-size: 20px;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.gender {
+    margin-bottom: 10px;
+}
+
 .instructions {
     margin-left: 15%;
     margin-right: 15%;
@@ -13,8 +25,9 @@ h1, .comments div > h2, .report {
 }
 
 .comments p {
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 7%;
+    margin-right: 7%;
+    font-size: 20px;
 }
 
 .comments p:hover {
@@ -22,9 +35,12 @@ h1, .comments div > h2, .report {
     cursor: pointer;
 }
 
-#name {
-    height: 25px;
-    width: 100px;
+.comments div {
+    border-style: solid;
+    margin-left: 18%;
+    margin-right: 18%;
+    margin-bottom: 5px;
+    padding-bottom: 20px;
 }
 
 #report {
@@ -33,4 +49,18 @@ h1, .comments div > h2, .report {
     padding: 10px;
     margin-left: 15%;
     margin-right: 15%;
+}
+
+#name {
+    height: 25px;
+    width: 230px;
+    font-size: 20px;
+}
+
+button {
+    font-size: 20px;
+}
+
+button:hover {
+    cursor: pointer;
 }
