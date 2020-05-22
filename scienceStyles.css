@@ -1,4 +1,10 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
     background: white;
 }
 
@@ -24,8 +30,12 @@ p {
     font-size: 25px;
 }
 
+.main {
+    display: flex;
+}
+
 .comments {
-    margin-right: 600px;
+    width: 65%;
 }
 
 .comments p {
@@ -40,22 +50,25 @@ p {
 
 .comments div {
     border-style: solid;
-    margin-left: 18%;
-    margin-right: 18%;
+    margin-left: 10%;
+    margin-right: 10%;
     margin-bottom: 5px;
     padding-bottom: 20px;
 }
 
 .report {
+    margin-left: 1000px;
+    width: 35%;
     position: fixed;
-    right: 120px;
-    left: 1000px;
 }
 
 #report {
+    padding: 10px;
+}
+
+.border-box {
     border-style: solid;
     border-color: black;
-    padding: 10px;
 }
 
 #name {
@@ -70,6 +83,10 @@ button {
 
 button:hover {
     cursor: pointer;
+}
+
+span {
+    pointer-events: none;
 }
 
 /* .footer {
