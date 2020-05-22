@@ -48,10 +48,12 @@ h1, .comments div > h2, .report {
 
 .comments {
     width: 65%;
-    height: 600px;
+    height: 570px;
     overflow: scroll;
-    scroll-snap-type: y;
-    border-top: black;
+    scroll-snap-type: y mandatory;
+    border-style: solid;
+    border-color: black;
+    background-color: black;
 }
 
 .comments p {
@@ -67,16 +69,19 @@ h1, .comments div > h2, .report {
 
 .comments div {
     border-style: solid;
+    scroll-snap-align: start;
     margin-left: 10%;
     margin-right: 10%;
     margin-bottom: 5px;
     padding-bottom: 20px;
+    background-color: white;
 }
 
 
 .report {
     width: 35%;
-    margin-right: 25px;
+    margin-right: 15px;
+    margin-left: 7px;
 }
 
 #report {
