@@ -50,7 +50,7 @@ h1, .comments div > h2, .report {
     width: 65%;
     height: 570px;
     overflow: scroll;
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y;
     border-style: solid;
     border-color: black;
     background-color: black;
