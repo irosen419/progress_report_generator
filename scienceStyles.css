@@ -12,8 +12,20 @@ h1, .comments div > h2, .report {
     text-align: center;
 }
 
-p {
+.header p {
     font-size: 20px;
+}
+
+.header {
+    display: flex;
+}
+
+.left {
+    width: 60%;
+}
+
+.right {
+    margin-right: 45px;
 }
 
 .buttons {
@@ -27,7 +39,7 @@ p {
 .instructions {
     margin-left: 15%;
     margin-right: 15%;
-    font-size: 25px;
+    font-size: 15px;
 }
 
 .main {
@@ -36,11 +48,16 @@ p {
 
 .comments {
     width: 65%;
+    height: 600px;
+    overflow: scroll;
+    scroll-snap-type: y;
+    border-top: black;
 }
 
 .comments p {
     margin-left: 7%;
     margin-right: 7%;
+    font-size: 20px;
 }
 
 .comments p:hover {
@@ -56,10 +73,10 @@ p {
     padding-bottom: 20px;
 }
 
+
 .report {
-    margin-left: 1000px;
     width: 35%;
-    position: fixed;
+    margin-right: 25px;
 }
 
 #report {
