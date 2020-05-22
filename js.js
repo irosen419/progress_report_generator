@@ -29,7 +29,6 @@ const handleCommentDoubleClick = function unconcat(e) {
     comment.addEventListener('click', handleCommentClick);
 }
 
-
 // Event Listeners
 for (let i = 0; i < comments.length; i++) {
     comments[i].addEventListener('click', handleCommentClick);
@@ -38,8 +37,6 @@ for (let i = 0; i < comments.length; i++) {
 for (let i = 0; i < comments.length; i++) {
     comments[i].addEventListener('dblclick', handleCommentDoubleClick);
 }
-
-// Functions
 
 function clickEnter() {
     var inputVal = document.getElementById('name').value;
