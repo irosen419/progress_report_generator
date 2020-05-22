@@ -1,4 +1,5 @@
 const comments = document.querySelectorAll('.comments p');
+const spans = document.getElementsByTagName('span');
 let selfWords = document.getElementsByClassName('self');
 let pronounWords = document.getElementsByClassName('pronoun1');
 let firstPronounWords = document.getElementsByClassName('pronoun1first');
@@ -35,9 +36,18 @@ for (let i = 0; i < comments.length; i++) {
     comments[i].addEventListener('click', handleCommentClick);
 }
 
+
 for (let i = 0; i < comments.length; i++) {
     comments[i].addEventListener('dblclick', handleCommentDoubleClick);
 }
+
+// for (let i = 0; i < spans.length; i++) {
+//     spans[i].addEventListener('click', handleCommentClick);
+// }
+
+// for (let i = 0; i < spans.length; i++) {
+//     spans[i].addEventListener('dblclick', handleCommentDoubleClick);
+// }
 
 // Functions
 
