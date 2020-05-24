@@ -26,10 +26,12 @@ h1, .comments div > h2, .report {
 
 .buttons {
     text-align: center;
+    padding: 10px;
 }
 
 .gender {
     margin-bottom: 10px;
+    padding: 10px;
 }
 
 .instructions {
@@ -93,6 +95,7 @@ h1, .comments div > h2, .report {
 
 button {
     font-size: 20px;
+    margin: 5px;
 }
 
 button:hover {

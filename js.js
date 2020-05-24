@@ -1,5 +1,6 @@
 const comments = document.querySelectorAll('.comments p');
 const spans = document.getElementsByTagName('span');
+let tense = document.getElementsByClassName('tense');
 let selfWords = document.getElementsByClassName('self');
 let pronounWords = document.getElementsByClassName('pronoun1');
 let firstPronounWords = document.getElementsByClassName('pronoun1first');
@@ -9,6 +10,7 @@ let firstPronoun3Words = document.getElementsByClassName('pronoun3first');
 let firstName = document.getElementsByClassName('fname');
 const studentsName = document.getElementById('name').value;
 let finalReport = document.getElementById('report').innerText;
+let tenseHash = { 'struggles': 'struggle', 'has': 'have', 'needs': 'need', 'tends': 'tend' }
 const commentArray = [];
 
 //Event Handlers
@@ -28,18 +30,26 @@ const handleCommentDoubleClick = function unconcat(e) {
     commentArray.splice(commentArray.indexOf(comment.innerText), 1);
     document.getElementById('report').innerText = commentArray.join(" ");
     comment.addEventListener('click', handleCommentClick);
-}
+};
+
+const handlePressEnter = function pressEnter(e) {
+    if (e.key === 'Enter') {
+        clickEnter();
+    }
+};
 
 
 // Event Listeners
 for (let i = 0; i < comments.length; i++) {
     comments[i].addEventListener('click', handleCommentClick);
-}
+};
 
 
 for (let i = 0; i < comments.length; i++) {
     comments[i].addEventListener('dblclick', handleCommentDoubleClick);
-}
+};
+
+document.addEventListener('keydown', handlePressEnter);
 
 // Functions
 
@@ -47,8 +57,8 @@ function clickEnter() {
     var inputVal = document.getElementById('name').value;
     for (let i = 0; i < firstName.length; i++) {
         firstName[i].innerText = inputVal;
-    }
-}
+    };
+};
 
 function chooseGenderMale() {
     for (let i = 0; i < selfWords.length; i++) {
@@ -69,6 +79,7 @@ function chooseGenderMale() {
     for (let i = 0; i < firstPronoun3Words.length; i++) {
         firstPronoun3Words[i].innerHTML = 'He ';
     }
+    
 }
 
 function chooseGenderFemale() {
@@ -91,3 +102,54 @@ function chooseGenderFemale() {
         firstPronoun3Words[i].innerHTML = 'She ';
     }
 }
+
+function chooseNonBinary() {
+    for (let i = 0; i < selfWords.length; i++) {
+        selfWords[i].innerHTML = 'themself';
+    }
+    for (let i = 0; i < pronounWords.length; i++) {
+        pronounWords[i].innerHTML = 'their';
+    }
+    for (let i = 0; i < pronoun2Words.length; i++) {
+        pronoun2Words[i].innerHTML = 'them';
+    }
+    for (let i = 0; i < firstPronounWords.length; i++) {
+        firstPronounWords[i].innerHTML = 'Their ';
+    }
+    for (let i = 0; i < pronoun3Words.length; i++) {
+        pronoun3Words[i].innerHTML = 'they';
+    }
+    for (let i = 0; i < firstPronoun3Words.length; i++) {
+        firstPronoun3Words[i].innerHTML = 'They ';
+    }
+    for (let tense1 of Object.keys(tenseHash)) {
+        var tense2 = tenseHash[tense1];
+        for (let word of tense) {
+            if (word.innerText = tense1) {
+                word.innerText = tense2;
+            }
+        }
+    }
+}
+
+
+// function chooseNonBinary() {
+//     for (let i = 0; i < selfWords.length; i++) {
+//         selfWords[i].innerHTML = 'themself';
+//     }
+//     for (let i = 0; i < pronounWords.length; i++) {
+//         pronounWords[i].innerHTML = 'their';
+//     }
+//     for (let i = 0; i < pronoun2Words.length; i++) {
+//         pronoun2Words[i].innerHTML = 'their';
+//     }
+//     for (let i = 0; i < firstPronounWords.length; i++) {
+//         firstPronounWords[i].innerHTML = 'Their ';
+//     }
+//     for (let i = 0; i < pronoun3Words.length; i++) {
+//         pronoun3Words[i].innerHTML = 'they';
+//     }
+//     for (let i = 0; i < firstPronoun3Words.length; i++) {
+//         firstPronoun3Words[i].innerHTML = 'They ';
+//     }
+// }
