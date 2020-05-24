@@ -41,14 +41,6 @@ for (let i = 0; i < comments.length; i++) {
     comments[i].addEventListener('dblclick', handleCommentDoubleClick);
 }
 
-// for (let i = 0; i < spans.length; i++) {
-//     spans[i].addEventListener('click', handleCommentClick);
-// }
-
-// for (let i = 0; i < spans.length; i++) {
-//     spans[i].addEventListener('dblclick', handleCommentDoubleClick);
-// }
-
 // Functions
 
 function clickEnter() {
