@@ -1,0 +1,157 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="scienceStyles.css">
+    <title>Language Arts Comments</title>
+</head>
+<body>
+    <div class="header">
+        <div class="left">
+            <h1 class="title">Progress Report Comment Generator</h1>
+            <p class="instructions">Welcome to the progress report generator for Language Arts! Simply follow the instructions, 
+                entering the student's name and how they identify. Then click on the comments in the desired order.
+                If you wish to remove a comment, simply double-click it in the list. You can then add it back into the paragraph if you wish, however it will now be at the end.
+            </br>
+            </br>
+                Your complete paragraph will appear in the box on the right. Copy and paste the generated paragraph to wherever you wish to store your reports!
+                Enjoy!
+            </p>
+        </div>
+        <div class="right"></div>
+            <div class="buttons">
+                <h2>Please enter the student's name then press Enter</h2>
+                <div>
+                    <input type="text" id="name" placeholder="Student's name goes here" font-size="20px">
+                    <button type="bottun" onClick="clickEnter()">Enter</button>
+                </div>
+                <h2>How does the student identify? Please choose one.</h2>
+                <div class="gender">
+                    <button onclick="chooseGenderMale()" class="male">Male</button>
+                    <button onclick="chooseGenderFemale()" class="female">Female</button>
+                    <button onclick="chooseNonBinary()" class="nonB">Non Binary / Gender Neutral</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="comments">
+
+            <!-- <span class="fname"><b>NAME</b></span>
+            <span class="self"><b>HIMSELF/HERSELF/THEMSELF</b></span>
+            <span class="pronoun1first"><b>HIS/HER/THEIR</b></span>
+            <span class="pronoun1"><b>HIS/HER/THEIR</b></span>
+            <span class="pronoun2"><b>HIM/HER/THEM</b></span>
+            <span class="pronoun3"><b>HE/SHE/THEY</b></span>
+            <span class="pronoun3first"><b>HE/SHE/THEY</b></span> -->
+
+            <div class="Introductory item">
+                <h2>Introductory Comments</h2>
+                <p><span class="fname"><b>NAME</b></span> is a cooperative, conscientious student and a pleasure to teach.</p>
+                <p>_____ is truly an asset to our class discussions.</p>
+                <p>_____ is able to understand and follow classroom routines independently.</p>
+                <p>With _____’s skills, effort, and enthusiasm, _____ is making gains in language arts.</p>
+                <p>Since _____ works to the best of _____ ability, _____ is able to successfully complete all assignments (independently).</p>
+                <p>It appeared that _____ enjoyed reading many class selections, especially _____.</p>
+                <p>This semester, _____ has enjoyed several expository units especially _____.</p>
+                <p>_____’s work is well organized, thoughtfully prepared and shows outstanding attention to detail.</p>
+                <p>_____ has internalized many reading strategies and displays greater confidence in language arts.</p>
+                <p>_____ has internalized many writing strategies and displays greater confidence in language arts.</p>
+                <p>_____ has internalized several reading strategies and displays greater confidence in language arts.</p>
+                <p>_____ has internalized several writing strategies and displays greater confidence in language arts.</p>
+                <p>_____ has internalized some reading strategies and displays greater confidence in language arts.</p>
+                <p>_____ has internalized some writing strategies and displays greater confidence in language arts.</p>
+                <p>_____ has begun to internalize many reading strategies and displays greater confidence in language arts.</p>
+                <p>_____ has begun to internalize many writing strategies and displays greater confidence in language arts.</p>
+                <p>_____ has begun to internalize several reading strategies and displays greater confidence in language arts.</p>
+                <p>_____ has begun to internalize several writing strategies and displays greater confidence in language arts.</p>
+                <p>_____ has begun to internalize some reading strategies and displays greater confidence in language arts.</p>
+                <p>_____ has begun to internalize some writing strategies and displays greater confidence in language arts.</p>
+                <p>_____ makes an excellent effort to apply the skills _____ has been taught in language arts.</p>
+                <p>_____ makes an admirable effort to apply the skills _____ has been taught in language arts.</p>
+                <p>_____ makes an consistent effort to apply the skills _____ has been taught in language arts.</p>
+                <p>_____ is an intellectually curious student and demonstrates a keen interest in expository units and current events.</p>
+            </div>
+            <div class="Academic item">
+                <h2>Positive Skills</h2>
+                <p>_____’s ability to transfer information from an MPO to draft an essay has improved this semester.</p>
+                <p>_____ has made steady progress using an MPO to organize written compositions.</p>
+                <p>_____ has made steady progress using an TO to organize written compositions.</p>
+                <p>_____ has made steady progress using an QO to organize written compositions.</p>
+                <p>_____ has made significant progress writing a coherent introduction for a multi-paragraph essay.</p>
+                <p>_____ has made significant progress writing a coherent conclusion for a multi-paragraph essay.</p>
+                <p>_____ has made significant progress drafting a coherent introduction for a multi-paragraph essay.</p>
+                <p>_____ has made significant progress drafting a coherent conclusion for a multi-paragraph essay.</p>
+                <p>_____ has made steady progress writing a coherent introduction for a multi-paragraph essay.</p>
+                <p>_____ has made steady progress writing a coherent conclusion for a multi-paragraph essay.</p>
+                <p>_____ has made steady progress drafting a coherent introduction for a multi-paragraph essay.</p>
+                <p>_____ has made steady progress drafting a coherent conclusion for a multi-paragraph essay.</p>
+                <p>_____ has become better able to recognize grammatical errors and correct them when proofreading written work.</p>
+                <p>_____ has become better able to recognize spelling errors and correct them when proofreading written work.</p>
+                <p>_____ has shown significant improvement in _____ ability to orally summarize main ideas.</p>
+                <p>_____ has shown significant improvement in _____ ability to orally restate main ideas.</p>
+                <p>_____ has shown significant improvement in _____ ability to orally identify main ideas.</p>
+                <p>_____’s ability to incorporate newly learned vocabulary has enriched ______ written work.</p>
+                <p>It is a pleasure to note _____’s improvement in language arts decoding and _____ effort is commendable.</p>
+                <p>It is a pleasure to note _____’s improvement in language arts reading fluency and _____ effort is commendable.</p>
+                <p>It is a pleasure to note _____’s improvement in language arts writing and _____ effort is commendable.</p>
+                <p>_____’s literal comprehension has significantly improved. Inferential comprehension remains an area that requires additional practice.</p>
+                <p>_____ has made steady progress in _____ decoding.</p>
+                <p>_____ has made steady progress in _____ summarizing.</p>
+                <p>_____ has made steady progress in _____ writing complex sentences.</p>
+                <p>_____ has made steady progress in _____ outlining.</p>
+                <p>_____ has made notable progress in _____ decoding.</p>
+                <p>_____ has made notable progress in _____ summarizing.</p>
+                <p>_____ has made notable progress in _____ writing complex sentences.</p>
+                <p>_____ has made notable progress in _____ outlining.</p>
+                <p>Since ____’s word attack skills have improved, _____ more readily self-corrects decoding errors.</p>
+                <p>Since ____’s reading fluency has improved, _____ is making gains in reading comprehension.</p>
+                <p>_____ can easily compose a paragraph using a Quick Outline. Outlining and writing multi-paragraph essays will be an important component of writing lessons next semester.</p>
+                <p>Since the sentence structure of _____’s writing has become more complex, _____ is able to incorporate greater detail in _____ written work.</p>
+            </div>
+            <div class="Goals item">
+                <h2>Area in Need of Improvement / Goal Comment</h2>
+                <p><span class="fname"><b>NAME</b></span> benefits from direct instruction strategies that enable <span class="pronoun2"><b>HIM/HER/THEM</b></span> to sequence, organize, and retrieve information.</p>
+                <p><span class="fname"><b>NAME</b></span> is encouraged to dedicate more time and effort into <span class="pronoun1"><b>HIS/HER/THEIR</b></span> assignments and classroom behavior in order to demonstrate <span class="pronoun1"><b>HIS/HER/THEIR</b></span> fine potential.</p>
+                <p><span class="fname"><b>NAME</b></span> is encouraged to increase <span class="pronoun1"><b>HIS/HER/THEIR</b></span> effort by attending extra help sessions prior to tests and quizzes. This strategy will help <span class="pronoun2">HIM/HER/THEM</span> achieve a higher level of success that is representative of <span class="pronoun1"><b>HIS/HER/THEIR</b></span> capabilities.</p>
+                <p><span class="fname"><b>NAME</b></span> is encouraged to seek additional resources and attend extra help sessions when new topics are introduced in order to reduce confusion, build confidence, and establish a strong foundation for future success.</p>
+                <p><span class="fname"><b>NAME</b></span> is encouraged to continue working on developing effective and timely self-advocacy skills.</p>
+                <p><span class="fname"><b>NAME</b></span> is encouraged to incorporate details more often in <span class="pronoun1"><b>HIS/HER/THEIR</b></span> writing. This will allow <span class="pronoun1"><b>HIS/HER/THEIR</b></span> work to more clearly reflect <span class="pronoun1"><b>HIS/HER/THEIR</b></span> comprehension.</p>
+                <p>Since <span class="pronoun3"><b>HE/SHE/THEY</b></span> <span class="tense">struggles</span> to retrieve and apply concepts, scaffolding questions, repetition, and visual learning strategies have been beneficial.</p>
+                <p><span class="fname"><b>NAME</b></span> is encouraged to use <span class="pronoun1"><b>HIS/HER/THEIR</b></span> notes when completing homework in order to benefit from the review opportunity.</p>
+                <p><span class="pronoun3first"><b>HE/SHE/THEY</b></span> <span class="tense">tends</span> to underestimate <span class="pronoun1"><b>HIS/HER/THEIR</b></span> capabilities and needs assurance to manage transitions.</p>
+            </div>
+            <div class="Positive item">
+                <h2>Positive Comment</h2>
+                <p><span class="fname"><b>NAME</b></span> presented <span class="self"><b>HIMSELF/HERSELF/THEMSELF</b></span> in a confident manner during lessons and activities.</p>
+                <p><span class="fname"><b>NAME</b></span> is a pleasure to have in class.</p>
+                <p><span class="fname"><b>NAME</b></span> demonstrated leadership qualities during class lessons and activities.</p>
+                <p><span class="fname"><b>NAME</b></span> provided several positive contributions during class, which furthered class discussions and reinforced concepts.</p>
+                <p><span class="fname"><b>NAME</b></span> seems more self-aware of monitoring focus and attention.</p>
+                <p><span class="fname"><b>NAME</b></span> continues to advocate appropriately for support in meeting personal objectives.</p>
+            </div>
+            <div class="Closing item">
+                <h2>Closing Comment</h2>
+                <p>With continued effort, <span class="fname"><b>NAME</b></span> should experience success in science next year.</p>
+                <p><span class="fname"><b>NAME</b></span> is encouraged to continue <span class="pronoun1"><b>HIS/HER/THEIR</b></span> best effort in science next year.</p>
+                <p>It is recommended that <span class="fname"><b>NAME</b></span> continue to pursue additional opportunities in the sciences during the summer and upcoming academic year.</p>
+                <p><span class="pronoun1first"><b>HIS/HER/THEIR</b></span> effort is commendable. Keep up the great work next year!</p>
+            </div>
+        </div>
+        <div class="report">
+            <h2>Your progress report will appear here</h2>
+            <div class="border-box">
+                <p id="report"></p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <ul>
+            <li><button type="button"><a href="index.html">Home</a></button></li>
+            <li><button type="button"><a href="science.html">Science</a></li></button>
+            <li><button type="button"><a href="ss.html">Social Studies</a></li></button>
+            <li><button type="button"><a href="math.html">Math</a></li></button>
+        </ul>
+    </div>
+    <script src="js.js"></script>
+</body>
+</html>
