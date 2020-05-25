@@ -1,6 +1,6 @@
 const comments = document.querySelectorAll('.comments p');
 const spans = document.getElementsByTagName('span');
-
+let tense = document.getElementsByClassName('tense');
 let selfWords = document.getElementsByClassName('self');
 let pronounWords = document.getElementsByClassName('pronoun1');
 let firstPronounWords = document.getElementsByClassName('pronoun1first');
@@ -79,7 +79,17 @@ function chooseGenderMale() {
     for (let i = 0; i < firstPronoun3Words.length; i++) {
         firstPronoun3Words[i].innerHTML = 'He ';
     }
-    
+    for (let tense1 of Object.keys(tenseHash)) {
+        
+        var tense2 = tenseHash[tense1];
+        
+        for (let i = 0; i < tense.length; i++) {
+            
+            if (tense2 === tense[i].innerText) {
+                tense[i].innerText = tense1;
+            }
+        }
+    }
 }
 
 function chooseGenderFemale() {
@@ -100,6 +110,17 @@ function chooseGenderFemale() {
     }
     for (let i = 0; i < firstPronoun3Words.length; i++) {
         firstPronoun3Words[i].innerHTML = 'She ';
+    }
+    for (let tense1 of Object.keys(tenseHash)) {
+        
+        var tense2 = tenseHash[tense1];
+        
+        for (let i = 0; i < tense.length; i++) {
+            
+            if (tense2 === tense[i].innerText) {
+                tense[i].innerText = tense1;
+            }
+        }
     }
 }
 
@@ -124,15 +145,14 @@ function chooseNonBinary() {
     for (let i = 0; i < firstPronoun3Words.length; i++) {
         firstPronoun3Words[i].innerHTML = 'They ';
     }
-    let tense = document.getElementsByClassName('tense');
-    let tenseHash = { 'struggles': 'struggle', 'has': 'have', 'needs': 'need', 'tends': 'tend' };
+    
     for (let tense1 of Object.keys(tenseHash)) {
         
         var tense2 = tenseHash[tense1];
         
         for (let i = 0; i < tense.length; i++) {
             
-            if (tense1 = tense[i].innerText) {
+            if (tense1 === tense[i].innerText) {
                 tense[i].innerText = tense2;
             }
         }
