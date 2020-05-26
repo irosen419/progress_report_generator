@@ -82,9 +82,17 @@ h1, .comments div > h2, .report {
     padding: 10px;
 }
 
+#report {
+    font-size: 20px;
+}
+
 .border-box {
     border-style: solid;
     border-color: black;
+}
+
+.uniqueComment {
+    display: inline-block;
 }
 
 #name {
@@ -93,8 +101,22 @@ h1, .comments div > h2, .report {
     font-size: 20px;
 }
 
+#selfWritten {
+    height: 30px;
+    width: 75%;
+    font-size: 20px;
+}
+#selfWritten button {
+    height: 50px;
+}
+
+#undo {
+    margin-top: 10px;
+}
+
 button {
     font-size: 20px;
+    margin-left: 10px;
 }
 
 button:hover {

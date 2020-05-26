@@ -51,10 +51,11 @@ document.addEventListener('keydown', handlePressEnter);
 
 // Functions
 function clickEnter() {
-    var inputVal = document.getElementById('name').value;
+    var inputName = document.getElementById('name').value;
     for (let i = 0; i < firstName.length; i++) {
-        firstName[i].innerText = inputVal;
+        firstName[i].innerText = inputName;
     }
+    inputCommentHere()
 }
 
 function chooseGenderMale() {
@@ -144,4 +145,25 @@ function chooseNonBinary() {
             }
         }
     }
+}
+
+function inputCommentHere() {
+    var inputComment = document.getElementById('selfWritten').value;
+    commentArray.push(inputComment);
+    document.getElementById('report').innerText = commentArray.join(" ");
+}
+
+function undoComment() {
+    for (let i = 0; i < comments.length; i++) {
+        console.log(comments[i].innerText)
+        if (comments[i].innerText === commentArray[commentArray.length - 1]) {
+            console.log("Hello!")
+            comments[i].style.color = "black";
+            comments[i].style.fontWeight = "normal";
+            comments[i].addEventListener('click', handleCommentClick);
+        }
+    }
+    commentArray.splice(commentArray.length - 1, 1);
+    document.getElementById('report').innerText = commentArray.join(" ");
+    
 }

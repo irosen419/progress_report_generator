@@ -10,7 +10,7 @@
             <h1 class="title">Progress Report Comment Generator</h1>
             <p class="instructions">Welcome to the progress report generator for Science! Simply follow the instructions, 
                 entering the student's name and how they identify. Then click on the comments in the desired order.
-                If you wish to remove a comment, simply double-click it in the list. You can then add it back into the paragraph if you wish, however it will now be at the end.
+                If you wish to remove a comment from the final report, simply double-click it in the list. You may also click the "Undo Last Comment" button. You can then add it back into the paragraph if you wish, however it will now be at the end.
             </br>
             </br>
                 Your complete paragraph will appear in the box on the right. Copy and paste the generated paragraph to wherever you wish to store your reports!
@@ -22,7 +22,7 @@
                 <h2>Please enter the student's name then press Enter</h2>
                 <div>
                     <input type="text" id="name" placeholder="Student's name goes here" font-size="20px">
-                    <button type="bottun" onClick="clickEnter()">Enter</button>
+                    <button type="button" onClick="clickEnter()">Enter</button>
                 </div>
                 <h2>How does the student identify? Please choose one.</h2>
                 <div class="gender">
@@ -88,6 +88,14 @@
             <h2>Your progress report will appear here</h2>
             <div class="border-box">
                 <p id="report"></p>
+            </div>
+            <div class="uniqueComment"></div>
+                <h2>Enter your own comments here</h2>
+                <div class="selfWritten">
+                    <input type="text" id="selfWritten" placeholder="Your unique comment goes here" font-size="20px">
+                    <button type="button" onClick="clickEnter()">Enter</button>
+                </div>
+                <button type="button" id="undo" onClick="undoComment()">Undo Last Comment</button>
             </div>
         </div>
     </div>
