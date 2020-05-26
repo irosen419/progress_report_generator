@@ -8,6 +8,7 @@ let firstPronoun3Words = document.getElementsByClassName('pronoun3first');
 let firstName = document.getElementsByClassName('fname');
 const studentsName = document.getElementById('name').value;
 let finalReport = document.getElementById('report').innerText;
+let tense = document.getElementsByClassName('tense');
 let tenseHash = { 'struggles': 'struggle', 'has': 'have', 'needs': 'need', 'tends': 'tend' }
 const commentArray = [];
 
@@ -75,15 +76,9 @@ function chooseGenderMale() {
     for (let i = 0; i < firstPronoun3Words.length; i++) {
         firstPronoun3Words[i].innerHTML = 'He ';
     }
-    for (let i = 0; i < emptyWords.length; i++) {
-        emptyWords[i].innerHTML = ' ';
-    }
     for (let tense1 of Object.keys(tenseHash)) {
-        
         var tense2 = tenseHash[tense1];
-        
         for (let i = 0; i < tense.length; i++) {
-            
             if (tense2 === tense[i].innerText) {
                 tense[i].innerText = tense1;
             }
@@ -109,9 +104,6 @@ function chooseGenderFemale() {
     }
     for (let i = 0; i < firstPronoun3Words.length; i++) {
         firstPronoun3Words[i].innerHTML = 'She ';
-    }
-    for (let i = 0; i < emptyWords.length; i++) {
-        emptyWords[i].innerHTML = ' ';
     }
     for (let tense1 of Object.keys(tenseHash)) {
         var tense2 = tenseHash[tense1];
@@ -143,9 +135,6 @@ function chooseNonBinary() {
     }
     for (let i = 0; i < firstPronoun3Words.length; i++) {
         firstPronoun3Words[i].innerHTML = 'They ';
-    }
-    for (let i = 0; i < emptyWords.length; i++) {
-        emptyWords[i].innerHTML = ' ';
     }
     for (let tense1 of Object.keys(tenseHash)) {
         var tense2 = tenseHash[tense1];
