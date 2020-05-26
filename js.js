@@ -10,17 +10,25 @@ let firstPronoun3Words = document.getElementsByClassName('pronoun3first');
 let firstName = document.getElementsByClassName('fname');
 const studentsName = document.getElementById('name').value;
 let finalReport = document.getElementById('report').innerText;
+const menus = document.getElementsByClassName('menu')
+const emptyWords = document.getElementsByClassName('empty');
 let tenseHash = { 'struggles': 'struggle', 'has': 'have', 'needs': 'need', 'tends': 'tend' }
+// let menuChoice = "";
 const commentArray = [];
 
 //Event Handlers
 const handleCommentClick = function concat(e) {
-    let comment = e.target;
+    let comment = e.target
     commentArray.push(comment.innerText);
+    // let word = commentArray[commentArray.length -1]
+    // if (word === 'select.menu') {
+    //     console.log(commentArray);
+    //     return
+    // };
     document.getElementById('report').innerText = commentArray.join(" ");
     comment.style.color = "blue";
     comment.style.fontWeight = "bold";
-    comment.removeEventListener('click', handleCommentClick);
+    comment.removeEventListener('click', handleCommentClick);;
 };
 
 const handleCommentDoubleClick = function unconcat(e) {
@@ -79,6 +87,9 @@ function chooseGenderMale() {
     for (let i = 0; i < firstPronoun3Words.length; i++) {
         firstPronoun3Words[i].innerHTML = 'He ';
     }
+    for (let i = 0; i < emptyWords.length; i++) {
+        emptyWords[i].innerHTML = ' ';
+    }
     for (let tense1 of Object.keys(tenseHash)) {
         
         var tense2 = tenseHash[tense1];
@@ -110,6 +121,9 @@ function chooseGenderFemale() {
     }
     for (let i = 0; i < firstPronoun3Words.length; i++) {
         firstPronoun3Words[i].innerHTML = 'She ';
+    }
+    for (let i = 0; i < emptyWords.length; i++) {
+        emptyWords[i].innerHTML = ' ';
     }
     for (let tense1 of Object.keys(tenseHash)) {
         
@@ -145,7 +159,9 @@ function chooseNonBinary() {
     for (let i = 0; i < firstPronoun3Words.length; i++) {
         firstPronoun3Words[i].innerHTML = 'They ';
     }
-    
+    for (let i = 0; i < emptyWords.length; i++) {
+        emptyWords[i].innerHTML = ' ';
+    }
     for (let tense1 of Object.keys(tenseHash)) {
         
         var tense2 = tenseHash[tense1];
@@ -159,26 +175,14 @@ function chooseNonBinary() {
     }
 }
 
-
-
-
-// function chooseNonBinary() {
-//     for (let i = 0; i < selfWords.length; i++) {
-//         selfWords[i].innerHTML = 'themself';
-//     }
-//     for (let i = 0; i < pronounWords.length; i++) {
-//         pronounWords[i].innerHTML = 'their';
-//     }
-//     for (let i = 0; i < pronoun2Words.length; i++) {
-//         pronoun2Words[i].innerHTML = 'their';
-//     }
-//     for (let i = 0; i < firstPronounWords.length; i++) {
-//         firstPronounWords[i].innerHTML = 'Their ';
-//     }
-//     for (let i = 0; i < pronoun3Words.length; i++) {
-//         pronoun3Words[i].innerHTML = 'they';
-//     }
-//     for (let i = 0; i < firstPronoun3Words.length; i++) {
-//         firstPronoun3Words[i].innerHTML = 'They ';
+// function chooseOne() {
+//     for (let i = 0; i < menus.length; i++) {
+//         menus[i].addEventListener('change', function(e) {
+//             // return e.target[e.target.selectedIndex].innerText;
+//             menuChoice = e.target[e.target.selectedIndex].innerText;
+//             console.log(`Menu choice is ${menuChoice}`)
+//         });
 //     }
 // }
+
+// chooseOne();
