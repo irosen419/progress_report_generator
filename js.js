@@ -11,6 +11,7 @@ let finalReport = document.getElementById('report').innerText;
 let tense = document.getElementsByClassName('tense');
 let tenseHash = { 'struggles': 'struggle', 'has': 'have', 'needs': 'need', 'tends': 'tend' }
 const commentArray = [];
+const seasons = document.getElementsByClassName('season');
 
 //Event Handlers
 const handleCommentClick = function concat(e) {
@@ -167,4 +168,16 @@ function undoComment() {
     }
     commentArray.splice(commentArray.length - 1, 1);
     document.getElementById('report').innerText = commentArray.join(" ");
+}
+
+function changingSeasons() {
+    var d = new Date();
+    var n = d.getMonth();
+    for (let i = 0; i < seasons.length; i++) {
+        if ((7 <= n && n <= 12) || (0 <= n && n <= 1)) {
+            seasons[i].innerHTML = 'fall';
+        } else if (2 <= n && n <= 6) {
+            seasons[i].innerHTML = 'spring';
+        }
+    }
 }
