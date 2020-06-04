@@ -59,6 +59,13 @@ document.getElementById('selfWritten').addEventListener('keydown', event => {
 
 
 // Functions
+
+function enterComment() {
+    var inputComment = document.getElementById('selfWritten').value;
+        commentArray.push(inputComment);
+        document.getElementById('report').innerText = commentArray.join(" ");
+}
+
 function clickEnter() {
     var inputName = document.getElementById('name').value;
     for (let i = 0; i < firstName.length; i++) {
